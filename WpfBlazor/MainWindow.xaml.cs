@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Extensions.DependencyInjection;
+using MudBlazor.Services;
 
 namespace WpfBlazor;
 
@@ -24,6 +25,7 @@ public partial class MainWindow : Window
 
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddWpfBlazorWebView();
+        serviceCollection.AddMudServices();
         Resources.Add("services", serviceCollection.BuildServiceProvider());
     }
 }
