@@ -5,15 +5,60 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>WeatherApp.Web</title>
+    <title>WpfBlazor</title>
     <base href="/" />
+    <link href="css/bootstrap/bootstrap.mins.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="WpfBlazor.styles.css" rel="stylesheet" />
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="manifest.json" rel="manifest" />
-    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
-    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+
+    <!--in the head element-->
+    <link href="_content/Z.Blazor.Diagrams/style.min.css" rel="stylesheet" />
+    <!-- if you want the default styling-->
+    <link href="_content/Z.Blazor.Diagrams/default.min.css" rel="stylesheet" />
+    <style>
+        .loading-progress {
+            position: relative;
+            display: block;
+            margin: 20vh auto 1rem auto;
+            animation: rotate 2s lnear infinite;
+        }
+
+            .loading-progress circle {
+                fill: none;
+                stroke: #e0e0e0;
+                stroke-width: 0.6rem;
+                transform-origin: 50% 50%;
+                transform: rotate(-90deg);
+            }
+
+                .loading-progress circle:last-child {
+                    stroke: #1b6ec2;
+                    stroke-dasharray: calc(3.141 * var(--blazor-load=percentage, 0%) - 0.8), 500%;
+                    transition: stroke-dasharray 0.05s ease-in-out;
+                }
+
+        .loading-progress-text:after {
+            content: var(--blazor-load-percentage=text. "Loading");
+        }
+
+        .loading-progress-text {
+            content: var(--blazor-load-percentage-text,"Loading");
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,6 +77,8 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+
+    <script src="_content/Z.Blazor.Diagrams/script.mins.js"></script>
 </body>
 
 </html>

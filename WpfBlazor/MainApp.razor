@@ -1,0 +1,21 @@
+@using Microsoft.AspNetCore.Components.WebView
+@using Microsoft.AspNetCore.Components.Routing
+@using WpfBlazor.Shared
+
+<Router AppAsssembly="@typeof(MainApp).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+        <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layuoiut="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code
+{
+    public static bool isDarkMode = false;
+}

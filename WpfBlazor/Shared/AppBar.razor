@@ -1,0 +1,26 @@
+﻿@using Blazored.LocalStorage
+@using MudBlazor
+
+@inject NavigationManager nav
+@inject ISnackbar Snackbar
+
+<MudAppBar Dense="true" Elevation="3" Color="MainApp.isDarkMode? Color.Surface: Color.Info">
+    @if (!MainApp.isDarkMode)
+    {
+        <MudImage Src="Images/Logo_Dark.png" Width="155" Height="35" />
+    }
+    else
+    {
+            <MudImage Src="Images/Logo_Bright.png" Width="155" Height="35" />
+    }
+    <MudSpacer/>
+    @if (MainApp.isDarkMode)
+    {
+            <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit" OnClick="ToggleTheme"/>
+    }
+    else
+    {
+            <MudIconButton Icon="@Icons.Material.Filled.Brightness5" Color="Color.Inherit" OnClick="ToggleTheme"/>
+    }
+    <MudIconButton Icon="@Icons.Material.Filled.Info" Color="Color.Inherit" OnClick="ToggleSOP"/>
+</MudAppBar>
