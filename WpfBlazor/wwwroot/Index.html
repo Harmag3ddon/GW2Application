@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!----->
     <title>WpfBlazor</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.mins.css" rel="stylesheet" />
@@ -18,12 +19,13 @@
     <link href="_content/Z.Blazor.Diagrams/style.min.css" rel="stylesheet" />
     <!-- if you want the default styling-->
     <link href="_content/Z.Blazor.Diagrams/default.min.css" rel="stylesheet" />
+
     <style>
         .loading-progress {
             position: relative;
             display: block;
             margin: 20vh auto 1rem auto;
-            animation: rotate 2s lnear infinite;
+            animation: rotate 2s linear infinite;
         }
 
             .loading-progress circle {
@@ -36,16 +38,19 @@
 
                 .loading-progress circle:last-child {
                     stroke: #1b6ec2;
-                    stroke-dasharray: calc(3.141 * var(--blazor-load=percentage, 0%) - 0.8), 500%;
+                    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
                     transition: stroke-dasharray 0.05s ease-in-out;
                 }
 
         .loading-progress-text:after {
-            content: var(--blazor-load-percentage=text. "Loading");
+            content: var(--blazor-load-percentage-text, "Loading");
         }
 
         .loading-progress-text {
-            content: var(--blazor-load-percentage-text,"Loading");
+            position: absolute;
+            text-align: center;
+            font-weight: bold;
+            inset: calc(21.8vh + 3.25rem) 0 auto 0.2rem;
         }
 
         @keyframes rotate {
@@ -74,7 +79,7 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webview.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
 
     <script src="_content/Z.Blazor.Diagrams/script.mins.js"></script>

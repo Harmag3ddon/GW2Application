@@ -31,7 +31,7 @@ namespace WpfBlazor.Shared
             Palette = new Palette()
             {
                 Secondary = "#ffdd00",
-                Info = "#FFFDD00",
+                Info = "#FFDD00",
                 Primary = "#000000",
                 PrimaryDarken = "#000000",
                 TextPrimary = "#000000b3",
