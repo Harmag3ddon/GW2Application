@@ -72,7 +72,6 @@ namespace WpfBlazor.Shared
             }
         }
 
-
         private async Task Theme()
         {
             string _isDarkMode = await localStorage.GetItemAsync<string>("theme");
@@ -100,7 +99,6 @@ namespace WpfBlazor.Shared
             NavMenu?.Refresh();
             StateHasChanged();
         }
-
         public void Refresh()
         {
                 StateHasChanged();
