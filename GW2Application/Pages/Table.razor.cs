@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using Element = WpfBlazor.Model.Element;
+using Element = GW2Application.Model.Element;
 using Microsoft.JSInterop;
 
-namespace WpfBlazor.Pages
+namespace GW2Application.Pages
 {
     public partial class Table
     {

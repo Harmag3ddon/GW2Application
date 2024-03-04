@@ -3,7 +3,7 @@ using MudBlazor;
 using System;
 using System.Threading.Tasks;
 
-namespace WpfBlazor.Shared
+namespace GW2Application.Shared
 {
     public partial class AppBar
     {

@@ -1,4 +1,4 @@
-﻿namespace WpfBlazor.Model
+﻿namespace GW2Application.Model
 {
     public class Element
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfBlazor
+namespace GW2Application
 {
     /// <summary>
     /// Interaction logic for App.xaml

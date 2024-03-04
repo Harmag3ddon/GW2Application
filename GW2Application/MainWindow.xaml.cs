@@ -3,7 +3,7 @@ using Blazored.LocalStorage;
 using Microsoft.Extensions.DependencyInjection;
 using MudBlazor.Services;
 
-namespace WpfBlazor;
+namespace GW2Application;
 
 public partial class MainWindow : Window
 {
