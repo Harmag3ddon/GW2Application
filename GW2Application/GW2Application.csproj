@@ -10,11 +10,16 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Images\BLTC.svg" />
 		<None Remove="Images\Logo_Dark.png" />
 		<None Remove="Images\Logo_Bright.png"></None>
 	</ItemGroup>
 
 	<ItemGroup>
+		<Content Include="Images\BLTC.svg">
+		  <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
 		<Content Include="Images\Logo_Dark.png">
 			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -29,6 +34,7 @@
     <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.27" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="6.0.552" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="MudBlazor" Version="6.2.3" />
   </ItemGroup>

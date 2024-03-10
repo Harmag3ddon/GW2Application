@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:GW2Application"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Title CHANGE" Height="850" Width="1500">
+        Title="GW2 Application" Height="850" Width="1500">
     <Grid>
         <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
             <blazor:BlazorWebView.RootComponents>

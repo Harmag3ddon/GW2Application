@@ -19,7 +19,7 @@
         <MudDivider Class="my-2"/>
         <MudNavLink Href="/1" Icon="@Icons.Material.Filled.Dashboard" IconColor="Color.Warning">@(!string.IsNullOrEmpty(MainWindow.Width) ? "" : "Page 1")</MudNavLink>
         <MudNavLink Href="/2" Icon="@Icons.Material.Filled.List" IconColor="Color.Warning">@(!string.IsNullOrEmpty(MainWindow.Width) ? "" : "Page 2")</MudNavLink>
-        <MudNavLink Href="/3" Icon="@Icons.Material.Filled.BugReport" IconColor="Color.Warning">@(!string.IsNullOrEmpty(MainWindow.Width) ? "" : "Page 3")</MudNavLink>
+        <MudNavLink Href="/3" Icon=@BlackLionTradingCompanyIcon>@(!string.IsNullOrEmpty(MainWindow.Width) ? "" : "BLTC")</MudNavLink>
     
     </MudNavMenu>
 
@@ -28,14 +28,20 @@
 </MudDrawer>
 
 @code{
+    private const string BlackLionTradingCompanyIcon =
+    "<image width=\"20\" height=\"25\" xlink:href=\"images/BLTC.png\" />";
+
     [Parameter] public MainLayout MainLayout {get; set;}
     private bool isOpen = true;
+    private string customIcon = null;
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
         MainLayout.NavMenu = this;
+        //customIcon = ReadSVG();
     }
+
     private async Task ShrinkMenu()
     {
         await MainLayout.ToggleMenu();
@@ -44,4 +50,5 @@
     {
         StateHasChanged();
     }
+
 }
